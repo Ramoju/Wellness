@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+    <item
+        android:title="@string/search"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+        <item
+            android:title="@string/my_cart_items"
+            android:id="@+id/showcart"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"/>
+        <item
+            android:title="@string/my_orders"
+            android:id="@+id/myorders"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_baseline_present_to_all_24"/>
+        <item
+            android:title="@string/my_account"
+            android:id="@+id/myaccount"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_baseline_person_24"/>
+        <item
+            android:title="@string/logout"
+            android:id="@+id/logout"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_baseline_logout_24"/>
+    </group>
+
+
+    <group>
+    <item
+        android:title="@string/add_new_product"
+        android:icon="@drawable/ic_baseline_medication_24"
+        android:visible="false"
+        android:id="@+id/addnewproduct"/>
+    <item
+        android:title="@string/view_sales_reports"
+        android:visible="false"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:id="@+id/salesreports"/>
+    </group>
+</menu>

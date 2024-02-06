@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".CheckoutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/payment_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:id="@+id/paymenttoolbar"
+        android:background="@color/skyblue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_payable"
+        android:id="@+id/amountlabel"
+        app:layout_constraintTop_toBottomOf="@id/paymenttoolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:textSize="25sp"
+        android:layout_marginStart="60dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:layout_marginTop="60dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:id="@+id/amounttopay"
+        app:layout_constraintTop_toBottomOf="@id/paymenttoolbar"
+        app:layout_constraintStart_toEndOf="@id/amountlabel"/>
+
+    <Button
+        android:id="@+id/payPalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Pay with PayPal"
+        app:layout_constraintTop_toBottomOf="@id/amountlabel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

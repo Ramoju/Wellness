@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".AddNewProduct">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <EditText
+      android:id="@+id/productspanishdesc"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/productprice"
+      android:layout_marginStart="88dp"
+      android:layout_marginTop="68dp"
+      android:drawableStart="@drawable/ic_baseline_description_24"
+      android:drawableTint="@color/black"
+      android:hint="Spanish Description"
+      android:minHeight="48dp"
+      app:layout_constraintStart_toEndOf="@+id/productcategory"
+      app:layout_constraintTop_toBottomOf="@+id/productdescription" />
+
+  <EditText
+      android:id="@+id/productcategory"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/productquantity"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:drawableStart="@drawable/ic_baseline_category_24"
+      android:drawableTint="@color/black"
+      android:hint="@string/product_category"
+      android:minHeight="48dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/productquantity" />
+
+  <androidx.appcompat.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:title="@string/add_new_product"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toRightOf="parent"
+      android:id="@+id/addproducttoolbar"
+      android:background="@color/skyblue"/>
+
+  <EditText
+      android:id="@+id/productname"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:drawableStart="@drawable/ic_name"
+      android:drawableTint="@color/black"
+      android:layout_marginTop="20dp"
+      android:hint="@string/product_name"
+      android:minHeight="48dp"
+      app:layout_constraintLeft_toRightOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/addproducttoolbar" />
+
+  <EditText
+      android:id="@+id/productdescription"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="96dp"
+      android:layout_marginTop="20dp"
+      android:hint="@string/description"
+      android:drawableStart="@drawable/ic_baseline_description_24"
+      android:drawableTint="@color/black"
+      android:minHeight="48dp"
+      app:layout_constraintLeft_toRightOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/productname"
+      app:layout_constraintTop_toBottomOf="@+id/addproducttoolbar" />
+
+  <EditText
+      android:id="@+id/productprice"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="5dp"
+      android:drawableStart="@drawable/ic_baseline_attach_money_24"
+      android:drawableTint="@color/black"
+      android:hint="@string/product_price"
+      android:inputType="number"
+      android:minHeight="48dp"
+      app:layout_constraintLeft_toRightOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/productdescription" />
+
+  <EditText
+      android:id="@+id/productquantity"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/productprice"
+      android:layout_marginStart="96dp"
+      android:layout_marginTop="4dp"
+      android:hint="@string/quantity"
+      android:inputType="number"
+      android:minHeight="48dp"
+      android:drawableStart="@drawable/ic_baseline_production_quantity_limits_24"
+      android:drawableTint="@color/black"
+      app:layout_constraintLeft_toRightOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/productprice"
+      app:layout_constraintTop_toBottomOf="@+id/productdescription" />
+
+  <Button
+      android:id="@+id/attachimages"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:backgroundTint="@color/skyblue"
+      android:text="@string/add_images"
+      android:textColor="@color/black"
+      android:layout_marginTop="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/button_save"
+      app:layout_constraintHorizontal_bias="0.043"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imagesRV"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/imagesRV"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/product_images"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/productcategory">
+
+  </androidx.recyclerview.widget.RecyclerView>
+
+  <Button
+      android:id="@+id/button_save"
+      android:layout_width="350dp"
+      android:layout_height="48dp"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="92dp"
+      android:layout_marginEnd="10dp"
+      android:backgroundTint="@color/skyblue"
+      android:text="@string/add_product"
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.946"
+      app:layout_constraintStart_toEndOf="@+id/attachimages"
+      app:layout_constraintTop_toBottomOf="@+id/imagesRV"
+      app:layout_constraintVertical_bias="0.47" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

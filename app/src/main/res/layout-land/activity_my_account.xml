@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MyAccount">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/user_profile_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:id="@+id/userprofiletoolbar"
+        android:background="@color/skyblue"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userfullname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/full_name_hint"
+        app:hintTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_name"
+        app:boxStrokeColor="@color/black"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        app:startIconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/user_email_layout"
+        app:layout_constraintTop_toBottomOf="@id/userprofiletoolbar"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_fullname"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/userfullname_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email_hint"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        app:startIconTint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/user_phone_layout"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_email_address"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/user_email_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/username_layout"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        android:hint="@string/phone_no_hint"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:boxStrokeColor="@color/black"
+        app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+        app:startIconTint="@color/black">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_phone_num"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_phone_layout"
+        app:layout_constraintBottom_toTopOf="@id/updateuserdetails"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        app:boxStrokeColor="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        app:startIconTint="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/username_hint">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/updateuserdetails"
+        android:text="@string/update_btn_label"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

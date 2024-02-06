@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "317805387527",
+    "firebase_url": "https://wellness-32b15-default-rtdb.firebaseio.com",
+    "project_id": "wellness-32b15",
+    "storage_bucket": "wellness-32b15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317805387527:android:be9c49d7c270b1d6edefa2",
+        "android_client_info": {
+          "package_name": "com.example.pharma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317805387527-d9tdp140hmiogf8mqr15q9cj7lsu875k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_G53XtSGqBdB9NYiVTihF5EtV_0AVlDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317805387527-d9tdp140hmiogf8mqr15q9cj7lsu875k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
